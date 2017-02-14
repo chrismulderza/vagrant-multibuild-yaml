@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  remote_user: root
+  gather_facts: False
+  pre_tasks:
+    - name: 'Install Python for Ansible'
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+      register: output
+      changed_when: output.stdout != ""
+    - setup:
+
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - geerlingguy.ntp

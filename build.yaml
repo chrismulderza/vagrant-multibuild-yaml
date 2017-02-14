@@ -1,0 +1,47 @@
+---
+- option: general
+  tld: dev
+  domain: bitbuild
+  project: bitbuild
+
+- option: machine
+  enabled: true
+  name: node1
+  description: "Primary Node"
+  primary: true
+  box: ubuntu/xenial64
+  box_url:
+  linked_clone: false
+  hostname: node1
+  memory: 512
+  cpus: 2
+  gui: false
+  private_ip: 192.168.56.10
+  vm_mods:
+    - option: --natdnshostresolver1
+      value: "on"
+    - option: --ioapic
+      value: "on"
+  provision: true
+  playbook: provisioning/ansible/playbook.yml
+
+- option: machine
+  enabled: true
+  name: node2
+  description: "Secondary Node"
+  primary: false
+  box: ubuntu/xenial64
+  box_url:
+  linked_clone: false
+  hostname: node2
+  memory: 512
+  cpus: 1
+  gui: false
+  private_ip: 192.168.56.11
+  vm_mods:
+    - option: --natdnshostresolver1
+      value: "on"
+    - option: --ioapic
+      value: "on"
+  provision: false
+  playbook: provisioning/ansible/playbook.yml

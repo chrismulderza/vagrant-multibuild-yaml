@@ -1,0 +1,17 @@
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+._*
+Icon
+Thumbs.db
+ehthumbs.db
+*.swp
+*.swo
+*.orig
+*~
+\#*\#
+.idea
+*.log
+.vagrant
+.vscode
