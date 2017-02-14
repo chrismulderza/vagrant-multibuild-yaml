@@ -176,8 +176,11 @@ $ vagrant plugin install vagrant-dns
 
 # Usage
 
-    $> vagrant up
+Clone this repository, modify the `build.yaml` as required then run:
 
+```bash
+$ vagrant up
+```
 
 # TODO
 
