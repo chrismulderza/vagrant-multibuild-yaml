@@ -89,7 +89,7 @@ The `machine` options pretty much mimic the Vagrant `config.vm` and
 - `cpus`: Number of virtual cores to allocate to the box.
 - `gui`: (Virtualbox only) Should the box start a GUI.
 - `private_ip`: The IPv4 address to assign to the box's private (host only) network
-    interface. ([See below](#Miscellaneous))
+    interface. ([See below](#miscellaneous))
 - `vm_mods`: (Virtualbox only) A hash of key/value pairs that define options to be
     passed to the Virtualbox provider. Only simple option/value sets can be specified
     at the moment. (See [VBoxManage documentation](https://www.virtualbox.org/manual/ch08.html))
