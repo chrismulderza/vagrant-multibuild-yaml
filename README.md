@@ -192,3 +192,4 @@ $ vagrant up
 - [ ] Make the `Vagrantfile` print a pretty summary using `config.vm.post_up_message`.
 - [ ] Investigate how to collect all machines in a build into a Virtualbox "group".
 - [ ] Configure guest /etc/hosts or "Internal" DNS.
+- [ ] Look at XIP for alternate hostname resolution
